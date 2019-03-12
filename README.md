@@ -1,2 +1,2 @@
 # some-works
-some beginning level works
+Basic implementations with Python

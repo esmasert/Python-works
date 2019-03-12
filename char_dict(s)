@@ -1,0 +1,15 @@
+def char_dict(s):
+    '''string -> dict of {string : integer}
+       Return a dictionary in which each key is a character of s and 
+       each value is the number of times that character occurs in s.
+    '''    
+    d = {}
+    for ch in s:
+        if ch not in d:
+            d[ch] = s.count(ch)
+            print(d)
+    d.sort()
+char_dict("international antalya university")
+
+'''x={'square':4,'triangle':3,'rectangle':4,'diamond':4,','parallelgram':4,'pentagon':5 }
+'''

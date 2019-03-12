@@ -1,0 +1,31 @@
+"""
+Suppose d is a dictionary that stores the classes that students take. Here is an example:
+
+d = {‘Ali’:[‘Math’, ‘Physics’], ‘Jane’:[‘Eng’, ‘Physics’], ‘David’:[‘Eng’, ‘Math’]}
+
+Write a function to convert this dictionary to another dictionary that contains classes as the keys:
+
+d2 = {‘Math’: [‘Ali’, ‘David’], ‘Physics’:[‘Ali’, Jane], ‘Eng’:[‘Jane’, ‘David’]}
+
+"""
+d = {'Ali':['Math', 'Physics'], 'Jane':['Eng', 'Physics'], 'David':['Eng', 'Math']}
+
+d2 = {}
+d3 = {}
+for key in d:
+    for value in d[key]:
+        if value in d2:
+            d2[value].append(key)
+        else:
+            d2[value] = [key]
+            
+print(d2)
+
+for key1 in d2:
+    for value in key1:
+        if key1 in d3:
+            d3[key1].append(value)
+        else:
+            d3[key1]= [value]
+            
+print (d3)

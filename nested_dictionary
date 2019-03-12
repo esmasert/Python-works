@@ -1,0 +1,17 @@
+nested_dict= {'monday':{9:['ahmet','mert','ceyda'], 11:['yeliz','kamer']}, 'tuesday':{10:['yeliz','ahmet'], 12: ['mert','ceyda']}}
+date_and_times={}
+name={}
+names={}
+for key in nested_dict:
+    for sub_key in nested_dict[key]:
+        for name in nested_dict[key][sub_key]:
+            if name not in names:
+                date_and_times[key]= sub_key
+                names[name]=date_and_times
+                date_and_times={}
+            else:
+                names[name][key]=sub_key
+
+    print(names)
+                
+            

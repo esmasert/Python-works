@@ -1,0 +1,11 @@
+num_rows=int(input("enter num:"))
+num_cols=int(input("enter num:"))
+def print_chess (num_rows, num_cols):
+    for i in range(0, num_rows):
+        for j in range(0, num_cols):
+            if (i + j) % 2 == 0:
+                print('*', end ='')
+            else:
+                print('.', end ='')
+        print()
+print(print_chess(num_rows, num_cols))

@@ -1,0 +1,19 @@
+def word_digits(word_list):
+    count=0
+    x=0
+    d={}
+    for key in word_list:
+        count=0
+        for i in key:
+            if i.isdigit():
+                count+=int(i)
+                print(count)
+                        
+        if count in d:
+            d[count].append(key)
+        else:
+            d[count]=[key]
+    return d
+
+word_list=(['art1b6', '2cbd4', 'lew1tr8', 'er3ct6', 'anf15' ])
+print(word_digits(word_list))
